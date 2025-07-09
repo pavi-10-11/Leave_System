@@ -1,0 +1,22 @@
+[
+  { "employeeId": 1, "leaveType": "SICK", "reason": "Fever", "fromDate": "2025-07-01", "toDate": "2025-07-02" },
+  { "employeeId": 1, "leaveType": "CASUAL", "reason": "Family", "fromDate": "2025-07-03", "toDate": "2025-07-03" },
+  { "employeeId": 2, "leaveType": "SICK", "reason": "Cold", "fromDate": "2025-07-01", "toDate": "2025-07-02" },
+  { "employeeId": 3, "leaveType": "CASUAL", "reason": "Personal", "fromDate": "2025-07-04", "toDate": "2025-07-05" },
+  { "employeeId": 4, "leaveType": "EARNED", "reason": "Travel", "fromDate": "2025-07-06", "toDate": "2025-07-07" },
+  { "employeeId": 5, "leaveType": "SICK", "reason": "Headache", "fromDate": "2025-07-08", "toDate": "2025-07-09" },
+  { "employeeId": 6, "leaveType": "PATERNITY", "reason": "New Baby", "fromDate": "2025-07-01", "toDate": "2025-07-10" },
+  { "employeeId": 7, "leaveType": "SICK", "reason": "Hospital", "fromDate": "2025-07-11", "toDate": "2025-07-13" },
+  { "employeeId": 8, "leaveType": "CASUAL", "reason": "Function", "fromDate": "2025-07-14", "toDate": "2025-07-14" },
+  { "employeeId": 9, "leaveType": "SICK", "reason": "Flu", "fromDate": "2025-07-15", "toDate": "2025-07-16" },
+  { "employeeId": 10, "leaveType": "EARNED", "reason": "Vacation", "fromDate": "2025-07-17", "toDate": "2025-07-20" },
+  { "employeeId": 1, "leaveType": "SICK", "reason": "Checkup", "fromDate": "2025-07-21", "toDate": "2025-07-21" },
+  { "employeeId": 2, "leaveType": "EARNED", "reason": "Trip", "fromDate": "2025-07-22", "toDate": "2025-07-23" },
+  { "employeeId": 3, "leaveType": "SICK", "reason": "Cold", "fromDate": "2025-07-24", "toDate": "2025-07-25" },
+  { "employeeId": 4, "leaveType": "CASUAL", "reason": "Event", "fromDate": "2025-07-26", "toDate": "2025-07-26" },
+  { "employeeId": 5, "leaveType": "MATERNITY", "reason": "Delivery", "fromDate": "2025-07-01", "toDate": "2025-08-01" },
+  { "employeeId": 6, "leaveType": "CASUAL", "reason": "Errand", "fromDate": "2025-07-03", "toDate": "2025-07-03" },
+  { "employeeId": 7, "leaveType": "EARNED", "reason": "Holiday", "fromDate": "2025-07-05", "toDate": "2025-07-08" },
+  { "employeeId": 8, "leaveType": "SICK", "reason": "Injury", "fromDate": "2025-07-09", "toDate": "2025-07-10" },
+  { "employeeId": 9, "leaveType": "EARNED", "reason": "Trip", "fromDate": "2025-07-11", "toDate": "2025-07-13" }
+]

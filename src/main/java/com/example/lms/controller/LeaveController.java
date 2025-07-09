@@ -1,9 +1,9 @@
-package com.example.LMS.Controller;
+package com.example.lms.controller;
 
-import com.example.LMS.Entity.Leave;
-import com.example.LMS.Entity.Employee;
-import com.example.LMS.Service.EmployeeService;
-import com.example.LMS.Service.LeaveService;
+import com.example.lms.entity.Leave;
+import com.example.lms.entity.Employee;
+import com.example.lms.service.EmployeeService;
+import com.example.lms.service.LeaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

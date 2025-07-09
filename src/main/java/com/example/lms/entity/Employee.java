@@ -1,4 +1,4 @@
-package com.example.LMS.Entity;
+package com.example.lms.entity;
 
 import jakarta.persistence.*;
 
@@ -16,7 +16,6 @@ public class Employee {
     private String phoneNumber;
     private String dept;
 
-
     public Employee() {}
 
     public Employee(Long employeeId, String firstName, String lastName, String email, String phoneNumber, String dept) {
@@ -27,8 +26,6 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.dept = dept;
     }
-
-
 
     public Long getEmployeeId() {
         return employeeId;
@@ -76,5 +73,17 @@ public class Employee {
 
     public void setDept(String dept) {
         this.dept = dept;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId=" + employeeId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", dept='" + dept + '\'' +
+                '}';
     }
 }

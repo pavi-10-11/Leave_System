@@ -1,10 +1,10 @@
-package com.example.LMS.Entity;
+package com.example.lms.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "leave_table") // Optional, because 'leave' is a reserved SQL keyword
+@Table(name = "leave_table")
 public class Leave {
 
     @Id
@@ -22,9 +22,7 @@ public class Leave {
     @Enumerated(EnumType.STRING)
     private LeaveType leaveType;
 
-
     public Leave() {}
-
 
     public Leave(Employee employee, LocalDate fromDate, LocalDate toDate, String reason, LeaveType leaveType) {
         this.employee = employee;
@@ -33,8 +31,6 @@ public class Leave {
         this.reason = reason;
         this.leaveType = leaveType;
     }
-
-
 
     public Long getLeaveId() {
         return leaveId;
@@ -82,5 +78,16 @@ public class Leave {
 
     public void setLeaveType(LeaveType leaveType) {
         this.leaveType = leaveType;
+    }
+
+    @Override
+    public String toString() {
+        return "Leave{" +
+                "employeeId=" + (employee != null ? employee.getEmployeeId() : null) +
+                ", leaveType=" + leaveType +
+                ", reason='" + reason + '\'' +
+                ", fromDate=" + fromDate +
+                ", toDate=" + toDate +
+                '}';
     }
 }

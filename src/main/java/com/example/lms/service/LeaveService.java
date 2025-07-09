@@ -1,8 +1,8 @@
-package com.example.LMS.Service;
+package com.example.lms.service;
 
-import com.example.LMS.Entity.Leave;
-import com.example.LMS.Entity.Employee;
-import com.example.LMS.Repository.LeaveRepository;
+import com.example.lms.entity.Leave;
+import com.example.lms.entity.Employee;
+import com.example.lms.repository.LeaveRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

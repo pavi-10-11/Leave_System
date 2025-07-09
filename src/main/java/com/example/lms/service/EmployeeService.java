@@ -1,7 +1,7 @@
-package com.example.LMS.Service;
+package com.example.lms.service;
 
-import com.example.LMS.Entity.Employee;
-import com.example.LMS.Repository.EmployeeRepository;
+import com.example.lms.entity.Employee;
+import com.example.lms.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

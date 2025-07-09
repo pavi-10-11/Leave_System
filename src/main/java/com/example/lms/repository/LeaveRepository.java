@@ -1,7 +1,7 @@
-package com.example.LMS.Repository;
+package com.example.lms.repository;
 
-import com.example.LMS.Entity.Leave;
-import com.example.LMS.Entity.Employee;
+import com.example.lms.entity.Leave;
+import com.example.lms.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

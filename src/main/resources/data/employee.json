@@ -1,0 +1,12 @@
+[
+  { "firstName": "Nazeem", "lastName": "Ali", "email": "nazeem1@example.com", "phoneNumber": "1111111111", "dept": "IT" },
+  { "firstName": "John", "lastName": "Doe", "email": "john@example.com", "phoneNumber": "2222222222", "dept": "HR" },
+  { "firstName": "Mary", "lastName": "Smith", "email": "mary@example.com", "phoneNumber": "3333333333", "dept": "Finance" },
+  { "firstName": "Kumar", "lastName": "Raj", "email": "kumar@example.com", "phoneNumber": "4444444444", "dept": "Sales" },
+  { "firstName": "Priya", "lastName": "K", "email": "priya@example.com", "phoneNumber": "5555555555", "dept": "HR" },
+  { "firstName": "David", "lastName": "Lee", "email": "david@example.com", "phoneNumber": "6666666666", "dept": "Admin" },
+  { "firstName": "Sara", "lastName": "M", "email": "sara@example.com", "phoneNumber": "7777777777", "dept": "Marketing" },
+  { "firstName": "Ravi", "lastName": "T", "email": "ravi@example.com", "phoneNumber": "8888888888", "dept": "Support" },
+  { "firstName": "Anjali", "lastName": "N", "email": "anjali@example.com", "phoneNumber": "9999999999", "dept": "Legal" },
+  { "firstName": "Tom", "lastName": "H", "email": "tom@example.com", "phoneNumber": "1010101010", "dept": "IT" }
+]
