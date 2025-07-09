@@ -2,23 +2,25 @@ package com.example.lms.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "employee")
+@Table(name = "Employee")
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long employeeId;
+    private String employeeId;
 
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNumber;
     private String dept;
-
+    @OneToMany(mappedBy = "employee")
+    private List<Leave> leaves;
     public Employee() {}
 
-    public Employee(Long employeeId, String firstName, String lastName, String email, String phoneNumber, String dept) {
+    public Employee(String employeeId, String firstName, String lastName, String email, String phoneNumber, String dept) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -27,11 +29,11 @@ public class Employee {
         this.dept = dept;
     }
 
-    public Long getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(Long employeeId) {
+    public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -75,6 +77,7 @@ public class Employee {
         this.dept = dept;
     }
 
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -86,4 +89,6 @@ public class Employee {
                 ", dept='" + dept + '\'' +
                 '}';
     }
+
+
 }

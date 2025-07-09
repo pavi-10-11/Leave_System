@@ -1,5 +1,6 @@
 package com.example.lms.controller;
 
+import com.example.lms.dto.LeaveData;
 import com.example.lms.entity.Leave;
 import com.example.lms.entity.Employee;
 import com.example.lms.service.EmployeeService;
@@ -37,7 +38,6 @@ public class LeaveController {
         if (employee == null) {
             return ResponseEntity.badRequest().body(null); // 400 Bad Request
         }
-
         Leave l = new Leave();
         l.setEmployee(employee);
         l.setLeaveId(leave.getLeaveId());
@@ -52,7 +52,7 @@ public class LeaveController {
 
 
     @GetMapping("/by-employee/{empId}")
-    public ResponseEntity<List<Leave>> getLeavesByEmployee(@PathVariable Long empId) {
+    public ResponseEntity<List<Leave>> getLeavesByEmployee(@PathVariable String empId) {
         Employee emp = empService.getById(empId);
         if (emp == null) {
             return ResponseEntity.notFound().build();
@@ -75,5 +75,11 @@ public class LeaveController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
+
+    }
+    @GetMapping("/leaveDetails")
+    public ResponseEntity<List<LeaveData>> getLeaveDetails() {
+        List<LeaveData> leaveSummary = leaveService.getLeaveData();
+        return ResponseEntity.ok(leaveSummary);
     }
 }

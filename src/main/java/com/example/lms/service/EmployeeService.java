@@ -19,11 +19,11 @@ public class EmployeeService {
         return repository.findAll();
     }
 
-    public Employee getById(Long id) {
+    public Employee getById(String id) {
         return repository.findById(id).orElse(null);
     }
 
-    public Employee get(Long id) {
+    public Employee get(String id) {
         return repository.findById(id).orElse(null);
     }
 
@@ -31,7 +31,7 @@ public class EmployeeService {
         return repository.save(employee);
     }
 
-    public void delete(Long id) {
+    public void delete(String id) {
         repository.deleteById(id);
     }
 }

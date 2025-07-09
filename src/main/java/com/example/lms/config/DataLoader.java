@@ -33,21 +33,21 @@ public class DataLoader implements CommandLineRunner {
             ObjectMapper mapper = new ObjectMapper();
 
 
-            System.out.println("Loading employees...");
+            System.out.println(" Loading employees...");
             InputStream empStream = new ClassPathResource("data/employee.json").getInputStream();
             List<Employee> employees = Arrays.asList(mapper.readValue(empStream, Employee[].class));
             for (Employee emp : employees) {
                 employeeService.save(emp);
-
             }
             System.out.println(" Employees loaded successfully!");
 
-            System.out.println(" Loading leaves...");
+            // Load leaves
+            System.out.println("Loading leaves...");
             InputStream leaveStream = new ClassPathResource("data/leaves.json").getInputStream();
             List<Map<String, Object>> leaveData = mapper.readValue(leaveStream, new TypeReference<>() {});
             for (Map<String, Object> data : leaveData) {
                 try {
-                    Long empId = Long.valueOf(data.get("employeeId").toString());
+                    String empId = data.get("employeeId").toString();
                     Employee emp = employeeService.get(empId);
                     if (emp != null) {
                         Leave leave = new Leave();
@@ -57,9 +57,8 @@ public class DataLoader implements CommandLineRunner {
                         leave.setFromDate(LocalDate.parse(data.get("fromDate").toString()));
                         leave.setToDate(LocalDate.parse(data.get("toDate").toString()));
                         leaveService.applyLeave(leave);
-
                     } else {
-                        System.err.println(" Employee not found for ID: " + empId);
+                        System.err.println("Employee not found for ID: " + empId);
                     }
                 } catch (Exception e) {
                     System.err.println(" Error parsing leave record: " + data);
